@@ -70,3 +70,33 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Spreads items to both sides */
+  align-items: center; /* Centers items vertically */
+  height: 100vh;
+  padding: 0 20px; /* Adds spacing from the edges */
+}
+
+.left-side {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%; /* Left side takes half the screen */
+}
+
+.right-side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%; /* Right side takes half the screen */
+}
+
+.responsive-image {
+  width: 100%;  /* Makes the image take the full width of its container */
+  max-width: 600px;  /* Limits how large the image can get */
+  height: auto;  /* Maintains aspect ratio */
+  display: block;  /* Removes default inline spacing */
+  margin: 0 auto;  /* Centers the image */
+}
