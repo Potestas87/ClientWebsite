@@ -5,7 +5,7 @@ import Services from './Services.js';
 import ContactMe from './ContactMe.js';
 import Portfolio from './Portfolio.js';
 import HomePage from './HomePage.js';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 function App() {
   const location = useLocation();

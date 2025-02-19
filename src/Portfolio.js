@@ -2,7 +2,7 @@ function Portfolio() {
     return (
       <div className="background">
         <h2>Portfolio</h2>
-        <p>I have had the chance to work on many amazing projects in my career. Let me walk you through some of them!</p>
+        <p className="portfolio-intro"> I have had the chance to work on many amazing projects in my career. Let me walk you through some of them!</p>
 
         <div style={{ textAlign: "center", marginTop: "20px" }}>
           <iframe

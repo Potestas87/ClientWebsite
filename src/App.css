@@ -58,11 +58,50 @@ p {
   animation-fill-mode: forwards;
 }
 
+.fade-slide-2 {
+  opacity: 0;
+  animation: fadeAndSlide 3s ease-out;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.fade-slide-3 {
+  opacity: 0;
+  animation: fadeAndSlide 4s ease-out;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+.fade-slide-4 {
+  opacity: 0;
+  animation: fadeAndSlide 5s ease-out;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+.fade-slide-5 {
+  opacity: 0;
+  animation: fadeAndSlide 6s ease-out;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+.fade-slide-6 {
+  opacity: 0;
+  animation: fadeAndSlide 7s ease-out;
+  animation-delay: 7s;
+  animation-fill-mode: forwards;
+}
+
 .background {
-  background: radial-gradient(circle, #327cd0, #7bfeed) no-repeat center center/cover;
+  background: radial-gradient(circle, #327cd0, #7bfeed);
+  background-size: cover;      /* Ensures the background covers the entire element */
+  background-position: center; /* Centers the gradient */
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -79,24 +118,129 @@ body {
   padding: 0 20px; /* Adds spacing from the edges */
 }
 
-.left-side {
+.container-2 {
+  align-items: center; /* Centers items vertically */
+  height: 100vh;
+  padding: auto; /* Adds spacing from the edges */
+}
+
+.container-3 {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  width: 50%; /* Left side takes half the screen */
+  justify-content: center;
+  position: relative;
 }
 
 .right-side {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   width: 50%; /* Right side takes half the screen */
 }
 
+.left-side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%; /* Left side takes half the screen */
+}
+
+.left-side-vertical {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: flex-end; /* Align to the right within the left side */
+  width: 50%; /* Right side takes half the screen */
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.right-side-vertical {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: flex-end; /* Align to the right within the left side */
+  width: 50%; /* Right side takes half the screen */
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.centered-text {
+  position: absolute; /* Positions the text relative to the container */
+  top: 50%; /* Moves the text down by 50% of the container's height */
+  left: 50%; /* Moves the text right by 50% of the container's width */
+  transform: translate(-50%, -50%); /* Centers the text precisely */
+  color: white; /* Example text color */
+  font-size: 20px; /* Example font size */
+  text-align: center; /* Centers the text horizontally */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+  padding: 10px; /* Optional: Adds padding for better readability */
+}
+
 .responsive-image {
   width: 100%;  /* Makes the image take the full width of its container */
-  max-width: 600px;  /* Limits how large the image can get */
+  max-width: 600px;   /*Limits how large the image can get */
   height: auto;  /* Maintains aspect ratio */
   display: block;  /* Removes default inline spacing */
   margin: 0 auto;  /* Centers the image */
+
+}.responsive-image-2 {
+  width: 25%;  /* Makes the image take the full width of its container */
+  max-width: 600px;   /*Limits how large the image can get */
+  height: auto;  /* Maintains aspect ratio */
+  margin: 0 auto;  /* Centers the image */
+}
+
+.responsive-image-3 {
+  display: block; /* Ensures the image behaves as a block element */
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+}
+
+.responsive-image-top {
+  width: 100%;  /* Makes the image take the full width of its container */
+  max-width: 600px;   /*Limits how large the image can get */
+  height: auto;  /* Maintains aspect ratio */
+  display: block;  /* Removes default inline spacing */
+  margin: 0px auto 0;
+}
+
+h2 {
+  position: relative;   /* Ensures it participates in normal flow but allows z-index */
+  z-index: 1001;        /* Higher than the menu-bar's z-index */
+  text-align: center;   /* Centers the text horizontally */
+  margin: 0 auto;       /* Centers the element horizontally (if it has a width) */
+  padding: 20px 0;      /* Adds some spacing above and below */
+  font-size: 32px;      /* Adjusts the font size for emphasis */
+  color: #ffffff;          /* Text color */
+  width: 100%;          /* Makes sure the <h2> takes up the full width */
+}
+
+h1 {
+  position: relative;   /* Ensures it participates in normal flow but allows z-index */
+  z-index: 1001;        /* Higher than the menu-bar's z-index */
+  text-align: center;   /* Centers the text horizontally */
+  margin: 0 auto;       /* Centers the element horizontally (if it has a width) */
+  padding: 20px 0;      /* Adds some spacing above and below */
+  font-size: 32px;      /* Adjusts the font size for emphasis */
+  color: #ffffff;          /* Text color */
+  width: 100%;          /* Makes sure the <h2> takes up the full width */
+}
+
+
+.portfolio-intro {
+  text-align: center;
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.inline-padding {
+  padding: 10px; /* Adds space inside each <a> element */
+  margin-right: 10px; /* Adds space to the right of each <a> element */
+  display: inline-block; /* Ensures padding/margin work as expected */
 }
